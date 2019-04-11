@@ -1,0 +1,64 @@
+.footer{
+	border-top: 1px solid #e0e0e0;
+	.linkgroop, p{
+		display: inline-block;
+	}
+	.linkgroop a{
+    	color: #666;
+    	text-decoration: none;
+    	position: relative;
+    	display: inline-block;
+	}
+	.linkgroop a, p{
+		font-size: 14px;
+		font-weight: 600;
+	}
+	.linkgroop a:hover:after {
+    	left: 0;
+    	width: 100%;
+	}
+	.linkgroop a:after {
+    	width: 0;
+    	content: "";
+    	display: block;
+    	background: #666;
+    	bottom: -2px;
+    	height: 1px;
+    	left: 50%;
+    	position: absolute;
+    	transition: all .35s ease;
+	}
+	@media screen and(min-width: 1024px){
+     	padding: 26px 0;
+		height: 80px;
+		.linkgroop{
+			float: right;
+		}
+		.linkgroop a{
+			margin-right: 50px;
+		}
+		p, ul{
+			margin: 0;
+		}
+		.credit{
+			line-height: 30px;
+			vertical-align: bottom;
+			padding-left: 20px;
+		}
+	}
+	@media screen and(max-width: 1023px){
+		.row{
+			padding-bottom: 15px;
+		}
+		text-align: center;
+		p, ul, div{
+			display: block;
+		}
+		.linkgroop a{
+			margin: 0px 20px;
+		}
+		ul{
+			margin: 10px 0;
+		}
+	}
+}

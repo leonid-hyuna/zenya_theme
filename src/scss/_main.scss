@@ -1,0 +1,107 @@
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.message_form{
+	input{
+		margin-top: 4px;
+		border: 1px solid #e0e0e0;
+     	height: 45px;
+     	border-radius: 6px;
+    	padding: 5px 15px;
+     	outline: 0;
+	}
+	dev{
+		span{
+			font-size: 13px;
+			font-weight: 600;
+		}
+	}
+	textarea{
+		margin-top: 4px;
+		border: 1px solid #e0e0e0;
+     	border-radius: 6px;
+    	padding: 10px 0 0 15px;
+     	outline: 0;
+    	min-height: 120px;
+    	resize: none;
+	}
+	@media screen and (min-width: 1024px){
+		textarea{
+			width: 96%;
+		}
+		input{
+			width: 92%;
+		}
+	}
+	@media screen and (max-width: 1023px){
+		textarea, input{
+			width: 100%;
+		}
+	}
+	.textarea{
+		margin-top: 35px;
+	}
+	button{
+      	margin: 20px 5px 0 15px;
+		color: #666;
+		display: inline-block;
+		padding: 15px 34px;
+		font-weight: 500;
+   		border: 1px solid #93cb53;
+		font-size: 13px;
+		border-radius: 24px;
+		font-weight: 500;
+		transition: background-color .4s, color .3s;
+		outline: none;
+	}
+	button:hover{
+		color: #fff;
+		background-color: #93cb53;
+	}
+}
+.questions{
+	height: auto;
+	span{
+		display: block;
+    	font-size: 16px;
+    	line-height: 26px;
+    	font-weight: 600;
+    	color: #666;
+		margin: 10px 0;
+		cursor: pointer;
+		img{
+			transform: rotate(90deg);
+			width: 0;
+			height: 15px;
+		}
+	}
+	p{
+		font-size: 14px;
+		line-height: 24px;
+		display: none;
+		margin: 0px;
+	}
+}
+.main{
+	background: linear-gradient(180deg,#fff 0,#f2f2f2);
+	padding-bottom: 70px;
+}
+label[class*="error"]{
+	display: inline-block;
+	font-size: 10px;
+	color: red;
+	font-weight: 600;
+}
+.error{
+	border-color: red !important;
+}
+textarea[class*="error"]{
+		border-color: red;
+	}
+.failed {
+    color: red;
+}
+.success{
+	color: #93cb53;
+}
