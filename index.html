@@ -14,7 +14,7 @@
 	<header class="header">
 		<div class="overlay"></div>
 		<div class="sideslide">
-			<a href="#">Support</a>
+			<a href="#" class="show-for-medium">EN</a>
 			<a href="#">Log In</a>
 		</div>
 		<div class="top_part">
@@ -41,9 +41,26 @@
 			<a href="#" class="logo">Zenya Theme</a>
 
 			<nav class="show-for-medium">
-				<a href="#" class="support">Support</a>
-				<a href="#" class="join_free" style="display: none;">Join for FREE</a>
+			
 				<a href="#" class="login">Log In</a>
+				
+				<div id="lang_selector" class="language-dropdown">
+                  <label for="toggle" class="lang-flag lang-en" title="Click to select the language">
+                    <span class="flag"></span>
+                  </label>
+                  <ul class="lang-list">
+                    <li class="lang lang-en selected" title="EN">
+                      <span class="flag"></span>
+                    </li>
+                    <li class="lang lang-pt" title="PT">
+                      <span class="flag"></span>
+                    </li>
+                    <li class="lang lang-es" title="ES">
+                      <span class="flag"></span>
+                    </li>
+                  </ul>
+                </div>
+                
 			</nav>
 		</div>
 		<div class="bottom_part">
@@ -55,13 +72,15 @@
 			<div>
 				<p>Questions? Call 8 800 555 3535</p><p>24 hours a day, 7 days a week</p>
 			</div>
+<!--
 			<div>
 				<p>Mail Us</p>
 				<a href="#">support@pickaflick.co</a>
 			</div>
+-->
 			<div>
 				<p>Membership</p>
-				<a href="#" class="cancel open_modal">Cancel your account</a>
+				<a href="#">Cancel your account</a>
 			</div>
 		</div>
 	</header>
@@ -73,19 +92,22 @@
 			<p style="font-size: 14px;">We take pride in our excellent customer service, and no email goes un-answered! Our 24/7 support will help you within seconds. Simply fill in the contact form below:</p>
 			<form class="message_form" id="contact">
 				<dev class="row small-collapse medium-collapse large-collapse">
+				
 					<dev class="large-6 column">
-						<span>Your name</span>
-						<input id="name" type="text" name="name" placeholder="Type your name here">
+						<span>Your email address</span>
+						<input id="email" type="email" name="email">
 					</dev>
 					
 					<dev class="large-6 column">
-						<span>E-mail address</span>
-						<input id="email" type="email" name="email" placeholder="Type your e-mail address here">
+						<span>Subject</span>
+						<input id="subject" type="text" name="subject">
 					</dev>
+					
 					<dev class="medium-12 column textarea">
-						<span>Your message</span><bt/>
-						<textarea id="message"  name="text" placeholder="Type your message here"></textarea>
+						<span>Description</span><bt/>
+						<textarea id="message"  name="text" ></textarea>
 					</dev>
+					
 					<button type="submit">Send message</button>
 				</dev>
 			</form>
@@ -173,6 +195,13 @@
 	</main>
 
 	<footer class="footer">
+	    <div class="statement">
+	      <p class="darkgrey">
+            <span class="site-name" data-shp="terms_copy_sitename_placeholder">Funfuntimes</span> is an all-inclusive entertainment service, providing unlimited<span data-shp="terms_feat_media"> movies, music, books and games.</span> We've matched our multimedia service to your interest profile. For more information, see our 
+            <a class="full-url" data-key="terms" href="https://funfuntimes.net/terms"><span class="underline">Terms &amp; Conditions</span></a> and 
+            <a class="full-url" data-key="privacy" href="https://funfuntimes.net/privacy"><span class="underline" data-shp="privacy_policy">Privacy Policy</span></a>.
+         </p>
+	    </div>
 		<div class="row">
 			<p class="credit">© 2019 [sitesite].zone</p>
 			<div class="linkgroop">

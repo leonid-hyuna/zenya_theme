@@ -29,8 +29,13 @@
     	transition: all .35s ease;
 	}
 	@media screen and(min-width: 1024px){
+        .statement{
+          position: relative;
+          width: 750px;
+          left: 50%;
+          margin-left: -375px;
+        }
      	padding: 26px 0;
-		height: 80px;
 		.linkgroop{
 			float: right;
 		}
@@ -47,6 +52,9 @@
 		}
 	}
 	@media screen and(max-width: 1023px){
+        .statement{
+          padding: 20px 10% 0;
+        }
 		.row{
 			padding-bottom: 15px;
 		}
