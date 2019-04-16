@@ -37,7 +37,6 @@
 
 .languages {
     position: relative;
-	top: 49px;
     width: 115px;
 	border: 2px solid #666;
     border-radius: 0 0 30px 30px!important;
@@ -62,7 +61,11 @@
 		font-size: 16px;
 	}
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 639px){
+  .languages {
+	top: 41px;
+    right: 10px;
+  }
   .holder{
     right: -30px;
   }
@@ -114,7 +117,11 @@
   padding-left: 10px;
   right: 15px;
 }
-@media screen and (min-width: 639px){
+@media screen and (min-width: 640px){
+  .languages {
+	top: 41px;
+    right: 10px;
+  }
   .holder{
     right: 140px;
   }

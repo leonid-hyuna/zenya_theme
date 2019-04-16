@@ -173,8 +173,8 @@ trigger.click(function() {
 });
 $('.languages li a span').click(function() {
     trigger.toggleClass('active_selector');
-  	// var texts = $(this).find("a").find("span").html();
+  	 var texts = $(this).find("a").find("span").html();
     var texts = $(this).parent().parent().html();
-//  	trigger.html(texts);
+  	trigger.html(texts);
     list.slideToggle(200);
 });
