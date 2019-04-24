@@ -53,17 +53,6 @@ $(".redirect").click(function () {
         return $(o).fadeIn(200), !1
 })
 
-$(".open_modal").click(function () {
-	$('.overlay, .popup').fadeIn(200, function(){
-		$('#cancel_form_1').show();
-	});
-})
-$(".close_modal,.overlay,.x_mark").click(function () {
-		$('#cancel_form_2,#cancel_form_3').hide();
-	$('.overlay, .popup').fadeOut(200);
-})
-
-
 $("#contact").validate({
 	rules: {
 		email: {
@@ -88,73 +77,6 @@ $("#contact").validate({
 	}
 });
 
-$("#cancel_form_1").validate({
-	rules: {
-		email: {
-			required: true,
-			email: true
-		},
-		password: {
-            required: true,
-            minlength: 5,
-		}
-	},
-	messages: {
-		email: {
-			required: "Please enter a valid email address",
-			email: "Please enter a valid email address"
-		},
-		password: {
-			required: "Please enter your password",
-			minlength: "Your password cand be shorter than 6 characters"
-		}
-	}
-});
-
-$("#cancel_form_2").validate({
-	rules: {
-		email: {
-			required: true,
-			email: true
-		}
-	},
-	messages: {
-		email: "Please enter a valid email address",
-		required: "Please enter a valid email address"
-	}
-});
-
-$("#cancel_form_3").validate({
-	rules: {
-		ccn_1: {
-			required: true,
-			number: true,
-			minlength: 6,
-			maxlength: 6
-		},
-		ccn_2: {
-			required: true,
-			number: true,
-			minlength: 4,
-			maxlength: 4
-		}
-	},
-	messages: {
-		ccn_1: {
-			required: "Please enter first 6 digits",
-			number: "Digits only accepted",
-			minlength: "There is not enough digits",
-			maxlength: "There is too much digits"
-		},
-		ccn_2: {
-			required: "Please enter last 4 digits",
-			number: "Digits only accepted",
-			minlength: "There is not enough digits",
-			maxlength: "There is too much digits"
-		},
-	}
-});
-
 //WIDGET
 var current_lang = $('.languages').data('current-lang');
 var block_lang = $('#' + current_lang).html();
@@ -168,13 +90,20 @@ var list = $('.languages');
 var lang = $('.lang');
 	
 trigger.click(function() {
+  if (trigger.hasClass('active_selector')){
+    list.slideToggle(200, function(){
+      trigger.toggleClass('active_selector');
+    })
+  }else{
     trigger.toggleClass('active_selector');
-      list.slideToggle(200);
+      list.slideToggle(200)
+  }
 });
 $('.languages li a span').click(function() {
-    trigger.toggleClass('active_selector');
-  	 var texts = $(this).find("a").find("span").html();
+    var texts = $(this).find("a").find("span").html();
     var texts = $(this).parent().parent().html();
   	trigger.html(texts);
-    list.slideToggle(200);
+    list.slideToggle(200, function(){
+      trigger.toggleClass('active_selector');
+    });
 });
